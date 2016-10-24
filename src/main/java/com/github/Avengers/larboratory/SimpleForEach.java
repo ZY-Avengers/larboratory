@@ -13,7 +13,7 @@ public class SimpleForEach implements Iterable<String>{
 				return index < str.length;
 			}
 			public String next() {
-				return null;
+				return null;//不知道怎么写了
 			}
 			public void remove() {				
 			}
