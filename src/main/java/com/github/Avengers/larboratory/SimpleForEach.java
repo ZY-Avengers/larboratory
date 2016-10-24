@@ -13,8 +13,8 @@ public class SimpleForEach implements Iterable<String> {
 		}
 	}
 
-	public Iterator<String> iterator() {
-		return new Iterator<String>() {
+	public Iterator iterator() {
+		return new Iterator() {
 
 			private int index = 0;
 
@@ -25,8 +25,12 @@ public class SimpleForEach implements Iterable<String> {
 			public String next() {
 				return str[index++];//不知道怎么写了
 			}
-		};
 
+			public void remove() {
+				str = null;
+			}
+
+		};
 
 	}
 }
