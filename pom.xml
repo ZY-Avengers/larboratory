@@ -57,4 +57,55 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>com.github.Avengers.larboratory</mainClass>
+                <layout>ZIP</layout>
+                <excludes>
+                    <!--
+                    com.mysema.querydsl:querydsl-apt
+                    com.mysema.codegen:codegen
+                    org.eclipse.jdt.core.compiler:ecj
+                    -->
+                    <exclude>
+                        <groupId>org.inferred</groupId>
+                        <artifactId>freebuilder</artifactId>
+                    </exclude>
+                    <exclude>
+                        <groupId>com.google.auto.value</groupId>
+                        <artifactId>auto-value</artifactId>
+                    </exclude>
+                    <exclude>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                    </exclude>
+                </excludes>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+                <!--execution>
+                    <id>pre-integration-test</id>
+                    <goals>
+                        <goal>start</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>post-integration-test</id>
+                    <goals>
+                        <goal>stop</goal>
+                    </goals>
+                </execution-->
+            </executions>
+        </plugin>
+        </plugins>
+    </build>
+
 </project>
