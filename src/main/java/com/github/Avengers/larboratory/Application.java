@@ -1,14 +1,10 @@
 package com.github.Avengers.larboratory;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.sql.rowset.spi.XmlReader;
 
 /**
  * Created by Meifans on 2016/9/21.
@@ -17,8 +13,6 @@ import javax.sql.rowset.spi.XmlReader;
 @SpringBootApplication
 public class Application {
 
-	@Autowired
-	private XmlReader reader;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
